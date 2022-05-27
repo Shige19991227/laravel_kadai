@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request
+use Illuminate\Http\Request;
 use App\News;
 
 class NewsController extends Controller
@@ -27,15 +27,12 @@ class NewsController extends Controller
       } else {
           $news->image_path = null;
       }
-​
-      unset($form['_token']);
-      
-      unset($form['image']);
-​
-      $news->fill($form);
-      $news->save();
-​
-    return redirect('admin/news/create');
+   unset($form['_token']);
+   unset($form['image']);
+   $news->fill($form);
+   $news->save();
+   
+   return redirect('admin/news/create');
   }
 
 }
