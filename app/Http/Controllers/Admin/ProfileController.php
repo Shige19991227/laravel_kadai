@@ -17,11 +17,11 @@ class ProfileController extends Controller
   {
     $this->validate($request, profile::$rules);
     
-     $news = new News;
+     $profile = new Profile;
       $form = $request->all();
    unset($form['_token']);
-   $news->fill($form);
-   $news->save();
+   $profile->fill($form);
+   $profile->save();
    
    return redirect('admin/profile/create');
   }
