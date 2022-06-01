@@ -10,7 +10,7 @@ class NewsController extends Controller
 {
  public function index(Request $request){
      $posts = News::all()->sortByDesc('update_at');
-     if (xount($posts)>0){
+     if (count($posts)>0){
          $headline=$posts->shift();
      }else{
          $headline=null;
