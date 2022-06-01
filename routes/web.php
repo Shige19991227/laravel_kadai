@@ -44,4 +44,4 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('profile/edit', 'Admin\ProfileController@update');
 });
 Route::get('/', 'NewsController@index');
-Route::get('/','ProfileController@index');
+Route::get('profile', 'Admin\ProfileController@index');
